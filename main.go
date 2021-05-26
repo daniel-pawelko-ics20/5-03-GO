@@ -24,13 +24,14 @@ func main() {
 	fmt.Println()
 
 	// Return what user can watch
-	if age >= 17 {
-		fmt.Println("You can see an R movie alone.")
-	} else if age >= 13 {
-		fmt.Println("You can see a PG-13 movie alone.")
-	} else if age >= 5 {
-		fmt.Println("You can see a G or PG movie alone.")
-	} else {
-		fmt.Println("Uh. You're too young for most things.")
-	}
+  switch{
+    case age >= 17:
+		  fmt.Println("You can see an R movie alone.")
+    case age >= 13:
+      fmt.Println("You can see a PG-13 movie alone.")
+    case age >= 5:
+      fmt.Println("You can see a G or PG movie alone.")
+    default:
+      fmt.Println("Uh. You're too young for most things.")
+  }
 }
